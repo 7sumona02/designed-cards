@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-inconsolata)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +21,12 @@
 }
 
 body {
-  background: var(--background);
+  background: #ffffff;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior: contain;
+}
+
+html {
+  scroll-behavior: smooth;
 }
