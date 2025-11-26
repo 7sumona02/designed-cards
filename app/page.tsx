@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { FaXTwitter } from 'react-icons/fa6'
 
@@ -45,11 +44,11 @@ const DisplayCards = () => {
   )
 }
 
-const Card = ({ imgUrl, title, href }: { imgUrl: string, title: string, href: string }) => {
+const Card = ({ Component, title, href }: { imgUrl: string, title: string, href: string }) => {
   return (
     <Link href={href} className='flex flex-col gap-2 items-center'>
       <div className='size-60 rounded-4xl border border-neutral-300 overflow-hidden hover:shadow-lg hover:shadow-neutral-200'>
-        <img src={imgUrl} alt='' className='w-full h-full object-cover' />
+        <img src={Component} alt='' className='w-full h-full object-cover' />
       </div>
       <div>{title}</div>
     </Link>
